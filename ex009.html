@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+    <style>
+        body{
+         
+            background-color: beige;
+        }
+        input{
+            background-color: rgb(162, 206, 204);
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Descobrindo de qual país da <strong>América do Sul</strong> você é.</h1>
+        1 Brasil<br/>
+        2 Argentina <br/>
+        3 Bolivia<br/>
+        4 Equador<br/>
+        5 Venezuela<br/>
+        6 Uruguai<br/>
+        7 Paraguai<br/>
+        8 Chile<br/>
+        9 Colombia<br/>
+        10 Suriname<br/>
+        11 Peru<br/>
+        12 Guiana<br/>
+        <p>Em qual país você nasceu?<br/>
+
+    </p> <input type="text" name="p" id="p">
+    <input type="button" value="ver" onclick="verificar()">
+
+    <div id="origem">
+        Sua nacionalidade é:
+    </div>
+
+    <script>
+        function verificar(){
+            var país = (document.querySelector('input#p').value)
+            var nacio = document.querySelector ('div#origem')
+            nacio.innerHTML = `Seu país é: <strong> ${país}</strong> <br/> `
+                if (país == 'Brasil'){
+                    nacio.innerHTML += `Você é <strong>BRASILEIRO.</strong>`
+                } 
+                if (país == 'Bolivia'){
+                    nacio.innerHTML += `Você é <strong> BOLIVIANO.</strong>`
+                } 
+                if (país == 'Equador'){
+                    nacio.innerHTML += `Você é <strong>EQUATORIANO.</strong>`
+                } 
+                if (país == 'Venezuela'){
+                    nacio.innerHTML += `Você é <strong>VENEZUELANO.</strong>`
+                } 
+                if (país == 'Paraguai'){
+                    nacio.innerHTML += `Você é <strong>PARAGUAIO.</strong>`
+                } 
+                if (país == 'Argentina'){
+                     nacio.innerHTML += `Você é <strong> ARGENTINO </strong>`
+                }
+                if (país == 'Uruguai'){
+                    nacio.innerHTML += `Você é <strong> URUGUAIO </strong>`
+                    
+                }
+                if (país == 'Chile'){
+                    nacio.innerHTML += `Você é <strong> CHILENO </strong>`
+    
+                }
+                if (país == 'Colombia'){
+                    nacio.innerHTML += `Você é <strong> COLOMBIANO </strong>`
+                    
+                }
+                if (país == 'Suriname'){
+                    nacio.innerHTML += `Você é <strong> SUNIMARENSE </strong>`
+                    
+                }
+                if (país == 'Peru'){
+                    nacio.innerHTML += `Você é <strong> PERUANO </strong>`
+                    
+                }
+                if (país == 'Guiana'){
+                    nacio.innerHTML += `Você é <strong> GUIANÊS </strong>`
+                    
+                }
+                if ((país != 'Brasil') && (país != 'Argentina') && (país!= 'Uruguai') && (país != 'Bolivia') &&(país != 'Equador') &&(país != 'Venezuela') &&(país != 'Paraguai') &&(país != 'Chile') && (país != 'Colombia') && (país != 'Suriname') && (país != 'Peru') && (país != 'Guiana'))
+                {
+            nacio.innerHTML = `Esse país não pertence a <strong>América do Sul<?strong> :(`
+                }
+                }
+    </script>
+    
+</body>
+</html>
